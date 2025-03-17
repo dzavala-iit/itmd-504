@@ -4,7 +4,37 @@
             <title>Damian Zavala - ITMD - 504</title>
         </head>
         <body>
-            <h1>Hello World!</h1>
-            <p>This is my first web page.</p>
+            <div class="root"> 
+                <h1>Add New Employee</h1> 
+                <div class="form"> 
+                    <div> 
+                        <h2 id="formTitle">Add Employee</h2> 
+                    </div> 
+                    <input type="text" 
+                           id="nameInput" 
+                           placeholder="Enter Name"
+                           title="Type in a name" 
+                           value="" /> 
+                      <input type="text" 
+                           id="deptInput" 
+                           value="" 
+                           placeholder="Enter Department" 
+                           title="Type in a name" /> 
+                      <input type="Number" 
+                           id="yearInput" 
+                           value="" 
+                           placeholder="Enter Employee's First Year"
+                           title="Type in a name" /> 
+                    <button id="submitItem" 
+                            type="button"
+                            onclick="submitItem()"> 
+                        Add Item 
+                    </button> 
+                    <button id="editItem" 
+                            style="display: none" 
+                            onclick="editItem()"> 
+                        Update 
+                    </button> 
+                </div>
         </body>
     </html>
