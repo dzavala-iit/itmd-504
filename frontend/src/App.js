@@ -2,7 +2,7 @@
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Employee from '/Emp_data.js';
+import Employee from './Employee.js';
 
 
 function App() {
