@@ -2,7 +2,7 @@
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Emp_data from './Emp_data';
+import Emp_data from './emp_data';
 
 
 function App() {

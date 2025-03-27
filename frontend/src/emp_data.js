@@ -30,4 +30,4 @@ function Emp_data() {
     )
 }
 
-export default emp_data
+export default Emp_data
