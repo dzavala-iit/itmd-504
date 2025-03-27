@@ -2,7 +2,7 @@
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Emp_data from './emp_data';
+import Employee from '/Emp_data.js';
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Emp_data />}> </Route>
+          <Route path='/' element={<Employee />}> </Route>
         </Routes>
       </BrowserRouter>
     </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import useEffect from 'react'
 
-function Emp_data() {
+function Employee() {
 
     useEffect(()=> {
         axios.get('http://172.31.4.53:8081/')
@@ -30,4 +30,4 @@ function Emp_data() {
     )
 }
 
-export default Emp_data
+export default Employee
