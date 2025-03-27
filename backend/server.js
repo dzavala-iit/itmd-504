@@ -13,6 +13,10 @@ mysql.createConnection({
     database: "itmd-504"
 })
 
+app.get("/", (req, res) => {
+    res.json("Hello from the backend!");
+})
+
 app.listen(8081, () => {
     console.log("Server is running on port 8081 and listening");
 })
