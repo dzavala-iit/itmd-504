@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors());
 
-mysql.createConnection({
+const db = mysql.createConnection({
     host: "database-1.c3agy6ykydbf.us-east-2.rds.amazonaws.com",
     user: "admin",
     password: "TfgCbs|[Jl9k|6G_!vX2k)MG(ae>",
@@ -14,7 +14,11 @@ mysql.createConnection({
 })
 
 app.get("/", (req, res) => {
-    res.json("Hello from the backend!");
+    const sql = "SELECT * FROM emp_data";
+    db.query(sql, (err, data) => {
+        if (err) return res.json("Error");
+        return res.json(data);
+    })
 })
 
 app.listen(8081, () => {
