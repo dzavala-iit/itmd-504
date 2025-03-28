@@ -3,13 +3,13 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 function CreateEmployee() {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
+    const [Name, setName] = useState('')
+    const [Email, setEmail] = useState('')
     const navigate = useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post('http//localhost:8081/create', {name, email})
+        axios.post('http//localhost:8081/create', {Name, Email})
         .then(res => {
             console.log(res);
             navigate('/');

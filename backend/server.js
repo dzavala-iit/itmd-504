@@ -24,8 +24,8 @@ app.get("/", (req, res) => {
 app.post('/create', (req, res) => {
     const sql = "INSERT INTO employees ('Name, 'Email') VALUES (?)";
     const values = [
-        req.body.name,
-        req.body.email
+        req.body.Name,
+        req.body.Email
     ]
     db.query(sql, [values], (err, data) => {
         if(err) return res.json("Error");
