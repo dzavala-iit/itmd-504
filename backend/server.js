@@ -14,7 +14,7 @@ const db = mysql.createConnection({
 })
 
 app.get("/", (req, res) => {
-    const sql = "SELECT * FROM Employee";
+    const sql = "SELECT * FROM employees";
     db.query(sql, (err, data) => {
         if (err) return res.json("Error");
         return res.json(data);
