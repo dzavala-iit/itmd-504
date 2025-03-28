@@ -5,7 +5,7 @@ import axios from 'axios'
 function Employee() {
     const [employees, setEmployees] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8081/')
+        axios.get('http://172.31.4.53:8081/')
         .then(res => setEmployees(res.data))
         .catch(err => console.log(err));
     })
