@@ -4,7 +4,7 @@ import useEffect from 'react'
 
 function Employee() {
     useEffect(()=> {
-        axios.get('http://172.31.4.53:8081/')
+        axios.get('http://localhost:8081/')
         .then(res => console.log(res))
         .catch(err => console.log(err));
     },[])   
