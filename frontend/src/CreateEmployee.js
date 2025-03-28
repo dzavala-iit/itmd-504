@@ -9,7 +9,7 @@ function CreateEmployee() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post('http://172.31.4.53:8081/create', {Name, Email})
+        axios.post('http://localhost:8081/create', {Name, Email})
         .then(res => {
             console.log(res);
             navigate('/');

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Employee() {
     const [employees, setEmployees] = useState([])
     useEffect(() => {
-        axios.get('http://172.31.4.53:8081/')
+        axios.get('http://localhost:8081/')
         .then(res => setEmployees(res.data))
         .catch(err => console.log(err));
     })
@@ -29,7 +29,7 @@ function Employee() {
                                     <td>{data.Name}</td>
                                     <td>{data.Email}</td>
                                     <td>
-                                        <button className='btn btn-primary'>Update</button>
+                                        <Link to={'update/${data.id}'} className='btn btn-primary'>Update</Link>
                                         <button className='btn btn-danger ms-3'>Delete</button>
                                     </td>
                                 </tr>
