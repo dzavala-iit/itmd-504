@@ -22,13 +22,15 @@ function CreateEmployee() {
                 <h2>Create Employee</h2>
                 <div className='mb-2'>
                     <label htmlFor="">Name</label>
-                    <input type="text" placeholder='Enter Name' className='form-control' />
+                    <input type="text" placeholder='Enter Name' className='form-control' 
                     onChange={e => setName(e.target.value)}
+                    />
                 </div>
                 <div className='mb-2'>
                     <label htmlFor="">Email</label>
-                    <input type="email" placeholder='Enter Email' className='form-control' />
+                    <input type="email" placeholder='Enter Email' className='form-control' 
                     onChange={e => setEmail(e.target.value)}
+                    />
                 </div>
                 <button className='btn btn-success'>Submit</button>
             </form>
