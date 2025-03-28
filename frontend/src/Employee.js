@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 
 function Employee() {
-    
+    const [employees, setEmployees] = useState([])
     useEffect(() => {
         axios.get('http://localhost:8081/')
-        .then(res => console.log(res))
+        .then(res => setEmployees(res.data))
         .catch(err => console.log(err));
     })
     return (
@@ -21,7 +21,14 @@ function Employee() {
                         </tr>
                     </thead>
                     <tbody>
-
+                        {
+                            employees.map((data, i)=> (
+                                <tr key={i}>
+                                    <td>{data.Name}</td>
+                                    <td>{data.Email}</td>
+                                </tr>
+                            ))
+                        }
                     </tbody>
                 </table>
             </div>
