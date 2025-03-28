@@ -1,6 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Employee from './Employee';
+import CreateEmployee from './CreateEmployee';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Employee />}> </Route>
+          <Route path='/create' element={<CreateEmployee />}> </Route>
         </Routes>
       </BrowserRouter>
     </div>
