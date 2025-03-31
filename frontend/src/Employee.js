@@ -23,8 +23,9 @@ function Employee() {
         <div className='d-flex vh-100 bg-primary justify-content-center align-items-center'>
             
             <div className='w-50 bg-white rounded p-5'>
-                <h2>Employee Lookup Datbase</h2>
+                <h2>Employee Lookup Database</h2>
                 <Link to="/create" className='btn btn-success'>Add +</Link>
+                <Link to="/about" className='btn btn-success'>About +</Link>
                 <table className='table'>
                     <thead>
                         <tr>
