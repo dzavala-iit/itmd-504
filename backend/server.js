@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.post('/create', (req, res) => {
-    const sql = "INSERT INTO 'employees' ('Name', 'Email') VALUES (?, ?)";
+    const sql = "INSERT INTO 'employees' ('Name', 'Email') VALUES (?)";
     const values = [
         req.body.Name,
         req.body.Email
