@@ -36,14 +36,15 @@ app.post('/create', (req, res) => {
 
 app.put('/update/:id', (req, res) => {
     
-    let sql = "update employees values (?, ?) where ID = ?";
-    let ID = req.params.id;
-    let Name = req.body.Name;
-    let Email = req.body.Email;
-    let params = [ID, Name, Email];
-    console.log(params);
-    db.query(sql, params, (err, data) => {
-        if (err) return res.json("Error");
+    const sql = "update employees set `Name` = ?, `Email` = ? where ID = ?";
+    const values = [
+        req.body.Name,
+        req.body.Email
+    ]
+    const id = req.params.id;
+
+    db.query(sql, [...values, id], (err, data) => {
+        if(err) return res.json("Error");
         return res.json(data);
     })
 })

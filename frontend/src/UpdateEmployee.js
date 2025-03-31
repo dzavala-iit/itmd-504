@@ -5,12 +5,12 @@ import { useNavigate, useParams } from 'react-router-dom';
 function UpdateEmployee() {
     const [Name, setName] = useState('')
     const [Email, setEmail] = useState('')
-    const {ID} = useParams();
+    const {id} = useParams();
     const navigate = useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();
-        axios.put('http://localhost:8081/update'+ID, { Name, Email})
+        axios.put('http://localhost:8081/update/'+id, { Name, Email})
         .then(res => {
             console.log(res);
             navigate('/');
