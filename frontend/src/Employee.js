@@ -11,15 +11,14 @@ function Employee() {
         .catch(err => console.log(err));
     })
 
-    const handledelete = async (id) {
+    const handleDelete = async (id) => {
         try {
             await axios.delete('http://localhost:8081/employees/'+id)
             window.location.reload()
-        }catch(err) {
+        } catch(err) {
             console.log(err);
         }
-
-    }
+    };
     return (
         <div className='d-flex vh-100 bg-primary justify-content-center align-items-center'>
             <div className='w-50 bg-white rounded p-5'>

@@ -50,9 +50,7 @@ app.put('/update/:id', (req, res) => {
 })
 
 app.delete('/employees/:id', (req, res) => {
-    
     const sql = "DELETE FROM employees WHERE ID = ?";
-    
     const id = req.params.id;
 
     db.query(sql, [id], (err, data) => {
