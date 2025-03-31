@@ -23,10 +23,10 @@ app.get("/", (req, res) => {
 });
 
 app.post('/create', (req, res) => {
-    const sql = "INSERT INTO 'employees' ('Name', 'Email') VALUES (?)";
+    const sql = 'INSERT INTO `employees` (`Name`,`Email`) values (?,?)';
     const values = [
-        req.body.Name,
-        req.body.Email
+        req.body.name,
+        req.body.email
     ]
     db.query(sql, [values], (err, data) => {
         if(err) return res.json("Error");
@@ -35,7 +35,7 @@ app.post('/create', (req, res) => {
 })
 
 app.put('/update/:id', (req, res) => {
-    const sql = "UPDATE 'employees' SET 'Name' = ?, 'Email' = ? WHERE id = ?";
+    const sql = "update employees set 'Name' = ?, 'Email' = ? where ID = ?";
     const values = [
         req.body.Name,
         req.body.Email
