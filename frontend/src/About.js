@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 function About() {
     return (
         <div className='d-flex vh-100 bg-primary justify-content-center align-items-center'>
@@ -8,7 +10,9 @@ function About() {
                 <p>This is a simple employee management system built with React and Express.</p>
                 <p>It allows you to add, update, and delete employees from the database.</p>
                 <p>It uses MySQL as the database.</p>
+                <Link to={`/`} className='btn btn-primary'>Return Home</Link>
             </div>
+            
         </div>
     )
     }

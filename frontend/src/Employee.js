@@ -25,7 +25,7 @@ function Employee() {
             <div className='w-50 bg-white rounded p-5'>
                 <h2>Employee Lookup Database</h2>
                 <Link to="/create" className='btn btn-success'>Add +</Link>
-                <Link to="/about" className='btn btn-success'>About +</Link>
+                <Link to="/about" className='btn btn-success ms-3'>About +</Link>
                 <table className='table'>
                     <thead>
                         <tr>
