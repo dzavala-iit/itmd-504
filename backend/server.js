@@ -23,16 +23,16 @@ app.get("/", (req, res) => {
 });
 
 app.post('/create', (req, res) => {
-    const sql = 'INSERT INTO `employees` (`Name`,`Email`) values (?,?)';
-    const values = [
-        req.body.name,
-        req.body.email
-    ]
-    db.query(sql, [values], (err, data) => {
-        if(err) return res.json("Error");
+    let sql = "INSERT INTO employees values (null, ?, ?)";
+    let Name = req.body.Name;
+    let Email = req.body.Email;
+    let params = [Name, Email];
+    console.log(params);
+    db.query(sql, params, (err, data) => {
+        if (err) return res.json("Error");
         return res.json(data);
-    })
-})
+    });
+});
 
 app.put('/update/:id', (req, res) => {
     const sql = "update employees set 'Name' = ?, 'Email' = ? where ID = ?";
