@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom'
 function Employee() {
     const [employees, setEmployees] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8081/')
+        axios.get('http://3.148.231.60:8081/')
         .then(res => setEmployees(res.data))
         .catch(err => console.log(err));
     })
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete('http://localhost:8081/employees/'+id)
+            await axios.delete('http://3.148.231.60:8081/employees/'+id)
             window.location.reload()
         } catch(err) {
             console.log(err);
