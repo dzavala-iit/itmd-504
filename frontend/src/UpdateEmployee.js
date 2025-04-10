@@ -10,7 +10,7 @@ function UpdateEmployee() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        axios.put('http://localhost:8081/update/'+id, { Name, Email})
+        axios.put('http://3.148.231.60:8081/update/'+id, { Name, Email})
         .then(res => {
             console.log(res);
             navigate('/');
