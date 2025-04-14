@@ -13,7 +13,7 @@ function Employee() {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete('http://3.148.231.60:8081/employees/'+id)
+            await axios.delete('http://3.146.152.16:8081/employees/'+id)
             window.location.reload()
         } catch(err) {
             console.log(err);
