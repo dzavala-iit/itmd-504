@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Employee() {
     const [employees, setEmployees] = useState([])
     useEffect(() => {
-        axios.get('http://3.148.231.60:8081/')
+        axios.get('http://3.146.152.16:8081/')
         .then(res => setEmployees(res.data))
         .catch(err => console.log(err));
     })
